@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Grocery Shopping and O...</title>
+    <link rel="shortcut icon"  type="image" href="title.jpg">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+       
+    .main-parent{
+
+                     
+               margin-left: 10%;
+               margin-right: 10%;
+               height:5000px;
+    }
+    .footer1{
+        margin-left: 800px;
+    
+    }
+    .footer1 span{
+         margin-left: 8px;
+         padding-left: 0px;
+         font-size: 14px;
+         font-family: ProximaNovaA-Regular;
+         color:#666666;
+         cursor: pointer;
+
+    }
+    .span-location select{
+        border: none;
+        font-size: 13px;
+        color: #4A4A4A;
+        cursor: pointer;
+    }
+     ::option{
+        border: none;
+        cursor: pointer;
+        
+    }
+    .Login a{
+        color: #666666;
+        text-decoration: none;
+    }
+    .span-location span, select:hover{
+        color: #6CD138;
+    }
+    .Login span,a:hover{
+        color: #6CD138;
+    }
+    .footer2{
+      
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      
+       
+    }
+    .img1{
+       margin-top: -33px;
+    }
+    .search{
+        margin-top: 40px;
+    }
+    input[type="search"]{
+      
+        margin-left: 80px;
+        width: 585px;
+        height: 30px;
+
+    }
+    
+      div span img{
+                position: absolute;
+                top:110;
+                padding-left: 4px;
+                height: 30px;
+                width: 30px;
+        }
+   .addtocart{
+       margin-left: 230px;
+       background-color: white;
+       height: 70px;
+       width: 140px;
+       
+   }
+   .addtocart:hover{
+    background-color: #F2F2F2;
+
+   }
+   .addtocart img{
+      
+       margin-top: 10px;
+       margin-left: 10px;
+   }
+   .addtocart span{
+       position: relative;
+       top: 8px;
+       left: 5px;
+       font-size: 15px;
+       font-family: ProximaNovaA-Semibold;
+       color: #4D4D4D;
+       font-weight: bolder;
+   }
+   .footer3{
+       border-top: 1px solid #f2f2f2;
+       border-bottom: 1px solid #eaeaea;
+       border-right: 1px solid #f2f2f2;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+   }
+#dropdownMenuButton1{
+                   width: 240px;
+                   border-radius:0px;
+                   border-color: #84c225;
+                   background-color: #84c225;
+                   outline: 0px;
+                   font-size: 15px;
+                   font-family: ProximaNovaA-Bold;
+                   color: #FFFFFF;
+                   font-weight: bold;
+                   padding: 8px 10px;
+
+}
+.dropdown ul li a{
+    color: #555555;
+      font-size: 14px;
+      font-family: ProximaNovaA-Regular;
+      padding: 7px 0px 7px 7px;
+}
+.dropdown ul li a:hover{
+    color: #222222;
+    background-color: #EAEAEA;
+}
+.footer3-offer{
+    width: 110px;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: auto;
+}
+.footer3-offer-a{
+    text-decoration: none;
+
+}
+.footer3-offer-a:hover{
+    background-color: #72a020;
+}
+.footer3-offer span{
+              color: #666666;
+              font-size: 14px;
+              font-family: ProximaNovaA-Regular;
+              padding-left: 10px
+
+}
+.footer3-offer:hover{
+              background-color: #72a020;
+              color: #fff;
+}
+.footer3-offer:hover span{
+    color:#fff ;
+}
+.footer3-bb{
+    width: 130px;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: auto;
+}
+.footer3-bb-a{
+    text-decoration: none;
+    
+}
+.footer3-bb-a:hover{
+    background-color: #72a020;
+}
+.footer3-bb span{
+              color: #666666;
+              font-size: 14px;
+              font-family: ProximaNovaA-Regular;
+              padding-left: 10px
+
+}
+.footer3-bb:hover{
+    background-color: #72a020;
+    color: #fff;
+              
+}
+.footer3-bb:hover span{
+    color:#fff ;
+}
+.footer3-bb .fab{
+    color: #84c225;
+}
+.after-slider{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+    .after-slider img{
+        margin-left: 10px;
+    }
+.my-smart-basket h3{
+    margin: 5px 5px 6px;
+    text-align: center;
+    font-size: 24px;
+    font-family: ProximaNovaA-Bold;
+    color:#4D4D4D;
+    
+    
+    
+}
+.my-smart-basket{
+    margin-top: 40px;
+    width: 1140px;
+    height: 34.2px;
+    border-bottom: #666666 dotted 0.5px;
+    
+}
+.my-smart-basket h3 .btn-sm{
+    background-color: #84c225;
+    height: 25px;
+    width: 120;
+    outline: none;
+    line-height: normal;
+    padding: 4px 10px;
+    border: none;
+    margin-left: 92%;
+    margin-top: -65px;
+    color: #FFFFFF;
+    
+}
+.main-chart{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+}
+.vegitable1{
+    width: 216px;
+    height: 402.78px;
+    background-color:#fefff7;
+    margin-left: 20px;
+    
+}
+.vegitable1 .Text-off{
+    height: 15px;
+    width: 170px;
+    background-color: white;
+    color: #BA5253;
+    font-size: 10px;
+    font-family:ProximaNova-Regular;
+    border: 1px solid wheat;
+    text-align: right;
+    margin-left: 10px;
+
+}
+.vegitable1 img{
+    margin-left: 20px;
+    width: 150px;
+}
+.fa-square{
+    width: 15px;
+  
+    color: green;
+    background-color: green;
+    font-size: 15px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.vegitable1 h6{
+    color: #999999;
+    font-size: 11px;
+    margin-top: -10px;
+    font-family: ProximaNovaA-Regular;
+    margin-left: 10px;
+}
+.vegitable1 a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    font-family: ProximaNovaA-Regular;
+    margin-left: 10px;
+}
+.vegitable1 a :hover{
+    color: #6CD138;
+}
+.ggg{
+    margin-top: 15px;
+    font: size 12px; ;
+    font-family: ProximaNovaA-Semibold;
+    color: #666666;
+    margin-left: 10px;
+
+}
+.quantity{
+    background-color: #F4F3F2;
+    width: 194px;
+    height: 89.8px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.quantity p{
+    font-size: 11px;
+    font-family: ProximaNovaA-Regular;
+    color: #666666;
+    margin-left: 20px;
+}
+.quantity p strike {
+    font-size: 10px;
+    font-family:ProximaNovaA-Regular;
+    color: #666666;
+}
+.quantity p span{
+    color: #231F20;
+    font-size: 14px;
+    font-family: ProximaNovaA-Regular;
+}
+.quantity .fa-truck{
+    color: #666666;
+    size: 30px;
+    margin-left: 20px;
+}
+.quantity .stand{
+    color: #333333;
+    font-size: 12px;
+    font-family:ProximaNovaA-Regular;
+
+}
+.quantity .btn-outline-secondary{
+    width: 28.33px;
+    height: 22px;
+    color: #999999;
+    background-color: #EEEEEE;
+    font-size: 12px;
+    padding: 0px 4px;
+    margin-left: 15px;
+
+}
+.quantity .form-control12{
+    width: 47.5px;
+    height: 22px;
+    color: #FFFFFF;
+    color: black;
+    m
+}
+.quantity .btn-add{
+    background-color: #f8f095;
+    width:75.83px;
+    height:22px;
+    font-size:13px;
+    color:#414042;
+    margin-left:5px;
+    padding-left:5px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-left:5px;
+}
+.heading{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-bottom: 0.05px dotted #8a8888;
+}
+ .heading h3{
+    margin: 5px 5px 6px;
+    text-align: center;
+    font-size: 24px;
+    font-family: ProximaNovaA-Bold;
+    color:#4D4D4D;
+}
+.bank-offer{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+.bank-offer img{
+    padding-left: 20px;
+}
+#shibu1{
+margin-top: 90px;
+margin-bottom: 50px;
+
+}
+
+    </style>
+</head>
+
+<body>
+   
+    <div class="main-parent">
+        <div class="footer1">
+        <span class="span-custmer">
+            <span><i class="fas fa-phone-alt"></i></span>
+            <span>8953286101</span>
+
+        </span>
+        <span class="span-location">
+            <span><i class="fas fa-map-marker-alt"></i></span>
+            <span>
+                <select name="Location" id="100">
+                    <option value="Location">Location</option>
+                   
+                            <option value="Pryagraj">Pryagraj</option>
+                            <option value="Varanshi">Varanshi</option>
+                            <option value="Bhadohi">Bhadohi</option>
+                            <option value="Locknow">Locknow</option>
+                            <option value="kanpur">kanpur</option>
+                            <option value="Bareli">Bareli</option>
+                            <option value="Agra">Agra</option>
+                            <option value="Noida">Noida</option>
+                            <option value="Sultanpur">Sultanpur</option>
+                 
+                </select>
+            </span>
+
+        </span>
+        <span class="Login">
+            <span> <i class="far fa-user"></i></span>
+            <span><a href="">Login/Sign Up</a></span>
+
+        </span>
+        </div>
+        <div class="footer2">
+            <div class="img1">
+                <img src="f3.png" alt="" height="160px" width="155px">
+            
+            </div>
+            <div class="search">
+                <input type="search" name="Serchbar" placeholder="Search For Products...">
+               <span> <img src="search.png" alt="" height="30" width="30"></span>
+    
+            </div>
+            <div class="addtocart">
+               <img src="images.png" alt="" height="50px" width="50px" >
+             
+                <span>My basket</span>
+    
+            </div>
+        </div>
+        <div class="footer3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  SHOP BY CATEGORY
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Fruits & Vegitables</a></li>
+                  <li><a class="dropdown-item" href="#">Foodgrains,Oil & Masala</a></li>
+                  <li><a class="dropdown-item" href="#">Bakery,Cakes & Dairy</a></li>
+                  <li><a class="dropdown-item" href="#">Bevrrages</a></li>
+                  <li><a class="dropdown-item" href="#">Snack & Branded Foods</a></li>
+                  <li><a class="dropdown-item" href="#">Beautiy & Hygine</a></li>
+                  <li><a class="dropdown-item" href="#">Cleaning & Household</a></li>
+                  <li><a class="dropdown-item" href="#">Kitchen,Garden & Rets</a></li>
+                  <li><a class="dropdown-item" href="#">Egg,Meat,& Fish</a></li>
+                  <li><a class="dropdown-item" href="#">Gormet & World Food</a></li>
+                  <li><a class="dropdown-item" href="#">Baby Care</a></li>
+                  <li><a class="dropdown-item" href="#">View All</a></li>
+                </ul>
+              </div>
+              <a href="#" class="footer3-offer-a"> <div class="footer3-offer">
+                   <img src="offer.jpg" alt="" height="25px" width="25px">
+                   <span>OFFERS</span>
+               </div></a>
+       <a href="" class="footer3-bb-a">  <div class="footer3-bb">
+
+        <i class="fab fa-houzz"></i>
+        <span>BB SPELCITY</span>
+
+       </div></a>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><span class="slider2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+              <a href="">  <img src="1.jpg" class="d-block w-100" alt="..."></a>
+              </div>
+              <div class="carousel-item">
+               <a href=""> <img src="2.jpg" class="d-block w-100" alt="..."></a>
+              </div>
+              <div class="carousel-item">
+               <a href=""> <img src="3.jpg" class="d-block w-100" alt="..."></a>
+              </div>
+              <div class="carousel-item">
+               <a href=""> <img src="4.jpg" class="d-block w-100" alt="..."></a>
+              </div>
+              <div class="carousel-item">
+              <a herf="">  <img src="5.jpg" class="d-block w-100" alt="..."><a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="after-slider">
+
+           <a href=""> <img src="6.png" alt=""></a>
+           <a href=""> <img src="7.png" alt=""></a>
+           <a href=""> <img src="8.png" alt=""></a>
+           <a href=""> <img src="9.png" alt=""></a>
+           <a href=""> <img src="10.png" alt=""></a>
+           <a href=""> <img src="11.png" alt=""></a>
+
+
+          </div>
+           <div class="my-smart-basket">
+                <h3> My Smart Basket <button type="button" class="btn btn-primary btn-sm">Show More</button>
+                </h3>
+           </div>
+<div class="main-chart">
+
+     <div class="vegitable1">
+      <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+     <a href=""> <img src="122.jpg" alt=""></a>
+     <p><i class="far fa-square"></i></p>
+     <h6>Fresho</h6>
+    <a href="">Capsicum - Green</a>
+     <div class="ggg">500 g</div>
+     <div class="quantity">
+
+        <p> MRP<strike>Rs 66</strike><span> Rs 52</span></p>
+        <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+            <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+          </div>
+
+          </div>
+     </div>
+     <div class="vegitable1">
+        <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+       <a href=""> <img src="12.jpg" alt=""></a>
+       <p><i class="far fa-square"></i></p>
+       <h6>Fresho</h6>
+      <a href="">Carrot - Orange</a>
+       <div class="ggg">500 g</div>
+       <div class="quantity">
+  
+          <p> MRP<strike>Rs 75.5</strike><span> Rs 60.60</span></p>
+          <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+          <div class="input-group mb-3">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+              <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+            </div>
+            </div>           
+</div>
+<div class="vegitable1">
+    <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+   <a href=""> <img src="13.jpg" alt=""></a>
+   <p><i class="far fa-square"></i></p>
+   <h6>Fresho</h6>
+  <a href="">Coriander Leaves</a>
+   <div class="ggg">100 g</div>
+   <div class="quantity">
+
+      <p> MRP<strike>10</strike><span> Rs 4.04</span></p>
+      <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+      <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+          <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+        </div>
+        </div>           
+</div>
+<div class="vegitable1">
+    <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+   <a href=""> <img src="14.jpg" alt=""></a>
+   <p><i class="far fa-square"></i></p>
+   <h6>Fresho</h6>
+  <a href="">Cucumber</a>
+   <div class="ggg">500 g</div>
+   <div class="quantity">
+
+      <p> MRP<strike>Rs 15.63</strike><span> Rs 12.50</span></p>
+      <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+      <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+          <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+        </div>
+        </div>           
+</div>
+<div class="vegitable1">
+    <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+   <a href=""> <img src="15.jpg" alt=""></a>
+   <p><i class="far fa-square"></i></p>
+   <h6>Fresho</h6>
+  <a href="">Ladies Finger</a>
+   <div class="ggg">500 g</div>
+   <div class="quantity">
+
+      <p> MRP<strike>Rs 40</strike><span> Rs 37.5</span></p>
+      <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+      <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+          <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+        </div>
+        </div>           
+</div>
+</div>
+
+<div class ="heading"> <h3> Bank Offers</h3></div>
+<div class="bank-offer">   
+<div>
+<a href=""><img src="16.jpg" alt="" height="204.75" width="273"></a>
+<a href=""><img src="17.jpg" alt="" height="204.75" width="273"></a>
+<a href=""><img src="18.jpg" alt="" height="204.75" width="273"></a>
+<a href=""><img src="19.jpg" alt="" height="204.75" width="273"></a>
+</div>
+</div>
+<div class="my-smart-basket" id="shibu1">
+    <h3>Best Sellers<button type="button" class="btn btn-primary btn-sm">Show More</button>
+    </h3>
+</div>
+<div class="main-chart">
+
+     <div class="vegitable1">
+      <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+     <a href=""> <img src="20.jpg" alt=""></a>
+     <p><i class="far fa-square"></i></p>
+     <h6>Fresho</h6>
+    <a href="">Capsicum - Green</a>
+     <div class="ggg">500 g</div>
+     <div class="quantity">
+
+        <p> MRP<strike>Rs 66</strike><span> Rs 52</span></p>
+        <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+            <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+          </div>
+
+          </div>
+     </div>
+     <div class="vegitable1">
+        <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+       <a href=""> <img src="21.jpg" alt=""></a>
+       <p><i class="far fa-square"></i></p>
+       <h6>Fresho</h6>
+      <a href="">Carrot - Orange</a>
+       <div class="ggg">500 g</div>
+       <div class="quantity">
+  
+          <p> MRP<strike>Rs 75.5</strike><span> Rs 60.60</span></p>
+          <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+          <div class="input-group mb-3">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+              <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+            </div>
+            </div>           
+</div>
+<div class="vegitable1">
+    <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+   <a href=""> <img src="22.jpg" alt=""></a>
+   <p><i class="far fa-square"></i></p>
+   <h6>Fresho</h6>
+  <a href="">Coriander Leaves</a>
+   <div class="ggg">100 g</div>
+   <div class="quantity">
+
+      <p> MRP<strike>10</strike><span> Rs 4.04</span></p>
+      <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+      <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+          <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+        </div>
+        </div>           
+</div>
+<div class="vegitable1">
+    <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+   <a href=""> <img src="23.jpg" alt=""></a>
+   <p><i class="far fa-square"></i></p>
+   <h6>Fresho</h6>
+  <a href="">Cucumber</a>
+   <div class="ggg">500 g</div>
+   <div class="quantity">
+
+      <p> MRP<strike>Rs 15.63</strike><span> Rs 12.50</span></p>
+      <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+      <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+          <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+        </div>
+        </div>           
+</div>
+<div class="vegitable1">
+    <div class="Text-off">GET 20% OFF<i class="fas fa-asterisk"></i></div>
+   <a href=""> <img src="24.jpg" alt=""></a>
+   <p><i class="far fa-square"></i></p>
+   <h6>Fresho</h6>
+  <a href="">Ladies Finger</a>
+   <div class="ggg">500 g</div>
+   <div class="quantity">
+
+      <p> MRP<strike>Rs 40</strike><span> Rs 37.5</span></p>
+      <i class="fas fa-truck"></i><span class="stand">Standard Delivery:Tomorrow</span>
+      <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Qty</button>
+          <input type="text" class="form-control12" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <span><button type="button" class="btn-add">ADD<i class="fas fa-shopping-basket"></i></button></span>
+        </div>
+        </div>           
+</div>
+</div>
+
+
+
+
+
+</div>
+</body>
+
+</html>
